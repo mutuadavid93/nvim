@@ -1,5 +1,6 @@
+
 return {
-	-- Below is from github url for this plugin
+	-- Below is from github url for this plugin 
 	"nvimtools/none-ls.nvim",
 	"nvimtools/none-ls-extras.nvim",
 
@@ -16,6 +17,10 @@ return {
 		})
 
 		-- Use Shift + F
-		vim.keymap.set("n", "<S-f>", vim.lsp.buf.format, keymaps.opts)
-	end,
+--		vim.keymap.set("n", "<S-f>", vim.lsp.buf.format, keymaps.opts)
+    vim.keymap.set("n", "<leader>f>", function()
+  print("Formatting triggered")
+  vim.lsp.buf.format()
+end, keymaps.opts)
+  end
 }
