@@ -6,7 +6,7 @@ return {
 
 	config = function()
 		local null_ls = require("null-ls")
-		local keymaps = require("keymaps")
+		-- local keymaps = require("keymaps")
 
 		null_ls.setup({
 			sources = {
@@ -17,10 +17,10 @@ return {
 		})
 
 		-- Use Shift + F
---		vim.keymap.set("n", "<S-f>", vim.lsp.buf.format, keymaps.opts)
-    vim.keymap.set("n", "<leader>f>", function()
-  print("Formatting triggered")
-  vim.lsp.buf.format()
-end, keymaps.opts)
+  vim.keymap.set("n", "<S-f>", vim.lsp.buf.format, {})
+    -- vim.keymap.set("n", "<leader>f>", function()
+ -- print("Formatting triggered")
+ -- vim.lsp.buf.format()
+-- end, keymaps.opts)
   end
 }
