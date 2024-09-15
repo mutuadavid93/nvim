@@ -11,7 +11,7 @@ return {
 
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "tsserver"}
+        ensure_installed = {"lua_ls", "tsserver", "quick_lint_js"}
       })
     end
   },
@@ -30,6 +30,9 @@ return {
       })
       lspconfig.tsserver.setup({
         capabilities = capabilities
+      })
+      lspconfig.tsserver.setup({
+        capabilites = capabilities
       })
 
       -- Shift + k => open function info on hover
