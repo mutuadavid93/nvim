@@ -1,15 +1,26 @@
-
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-
 -- If you type space i.e. spacebar enters into "live grep"
 vim.g.mapleader = " "
 
+local opt = vim.opt;
+
 --  setup commands
 --  Show line numbers by default
-vim.opt.number = true
+opt.relativenumber = true
+opt.number = true
+
+-- tabs & indentation
+opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.expandtab = true -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
+
+opt.wrap = false
+
+-- search settings
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true -- if you include mixed case in your search, assumes you want case sensitive
+
+opt.cursorline = true -- hihglight or underline current line
 
 -- Move selected lines down with Option + Down
 vim.keymap.set("v", "<M-Down>", ":m '>+1<CR>gv=gv")
