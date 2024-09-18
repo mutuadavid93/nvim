@@ -34,4 +34,3 @@ press `escape` to add that text to the end each of the target lines.
 
 - `Ctrl + :`, where you can open files, save or quit e.t.c
 
-

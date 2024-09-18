@@ -11,11 +11,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Include plugins and their dependencies
-local opts = {}
-
 -- Inlude an external file e.g. plugins.lua
 require("vim-options")
+require("lua.keymaps")
+
+-- Include plugins and their dependencies
 require("lazy").setup("plugins")
 
 -- Ctrl + c => copy selection
