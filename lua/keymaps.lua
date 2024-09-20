@@ -1,7 +1,7 @@
 -- if you type space i.e. spacebar enters into "live grep"
 vim.g.mapleader = " "
 
-local keymap = keymap -- for consciseness
+local keymap = vim.keymap -- for consciseness
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", "<S-f>", vim.lsp.buf.format, { desc = "Format buffer" })
@@ -39,11 +39,11 @@ keymap.set("n", "<leader>b", "<C-w>p", { noremap = true, silent = true })
 
 -- Keymap to jump to Neo-tree window
 keymap.set("n", "<leader>e", function()
-  local neotree_win_id = vim.fn.bufwinid("neo-tree filesystem [1]")   -- Get Neo-tree window ID
+  local neotree_win_id = vim.fn.bufwinid("neo-tree filesystem [1]") -- Get Neo-tree window ID
   if neotree_win_id ~= -1 then
-    vim.api.nvim_set_current_win(neotree_win_id)                      -- Focus Neo-tree window if open
+    vim.api.nvim_set_current_win(neotree_win_id)                    -- Focus Neo-tree window if open
   else
-    vim.cmd("Neotree toggle")                                         -- Toggle Neo-tree if not open
+    vim.cmd("Neotree toggle")                                       -- Toggle Neo-tree if not open
   end
 end, { noremap = true, silent = true })
 
