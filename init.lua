@@ -20,5 +20,3 @@ require("lazy").setup("plugins")
 
 -- Ctrl + c => copy selection
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
-
-

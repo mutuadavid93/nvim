@@ -2,7 +2,10 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.8',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'christoomey/vim-tmux-navigator' -- timux & split window navigation
+    },
 
     config = function()
       local builtin = require("telescope.builtin")
@@ -32,4 +35,3 @@ return {
     end
   }
 }
-
