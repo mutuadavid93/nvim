@@ -1,3 +1,0 @@
-Some wise words here and there
-
-This is a new buffer opened in a new split

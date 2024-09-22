@@ -61,3 +61,6 @@ each layer/tab has a different number of splits e.t.c
 
 - `:tabp`, switch to previous tab
 - above feature isn't used that much instead a plugin is preferred
+
+- to comment multiple lines use `Shift + V` then `gc`
+- to comment an entire block of code e.g. a function use `gcap`
